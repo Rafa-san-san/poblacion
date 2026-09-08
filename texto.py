@@ -1,10 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-# Guardar el script completo en un archivo .py local
-script_code = """import requests
-from bs4 import BeautifulSoup
-import pandas as pd
 
 url = "https://www.worldometers.info/geography/alphabetical-list-of-countries/?utm_source=chatgpt.com/"
 response = requests.get(url)
@@ -34,7 +30,3 @@ df = pd.DataFrame(filas, columns=columnas)
 df = df.set_index("#")
 df.to_csv("poblacion.csv", index=False)
 print("Scraping exitoso y archivo catalogo_libros.csv creado.")
-"""
-
-with open("texto.py", "w", encoding="utf-8") as f:
-    f.write(script_code)
